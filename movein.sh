@@ -17,17 +17,22 @@ function doGit() {
     ln -s $PWD/gitconfig ~/.gitconfig
 
     echo "[include]" >>~/.gitconfig
-    echo "path = $PWD/old/gitconfig" >>~/.gitconfig
+    echo "  path = $PWD/old/gitconfig" >>~/.gitconfig
 }
 
 # Move In tmux
 function doTmux() {
     touch ~/.tmux.conf && mv ~/.tmux.conf ./old/tmux.conf
     ln -s $PWD/tmux.conf ~/.tmux.conf
+}
 
+function doSsh() {
+    mkdir ~/.ssh && touch ~/.ssh/config && mv ~/.ssh/config ./old/ssh_config
+    ln -s $PWD/ssh/config ~/.ssh/config
 }
 
 aptPackages
 doGit
 installYarn
-
+doSsh
+doTmux

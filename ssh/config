@@ -1,0 +1,17 @@
+Host 192.168.0.93
+  HostName 192.168.0.93
+
+Host laptop
+  HostName 192.168.0.110
+
+Host laptop-dev
+  Hostname 192.168.122.246
+  ProxyCommand ssh -q -W %h:%p laptop
+
+Host *
+  Compression yes
+  User tmerritt
+  IdentityFile ~/.ssh/id_rsa
+
+Host kvm1
+  Hostname 10.4.20.1

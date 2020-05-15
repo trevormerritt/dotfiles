@@ -45,13 +45,3 @@
   prune = true
 [include]
 path = /home/tmerritt/Projects/dotfiles/old/gitconfig
-[include]
-path = /home/tmerritt/Projects/dotfiles/old/gitconfig
-[include]
-path = /home/tmerritt/Projects/dotfiles/old/gitconfig
-[include]
-path = /home/tmerritt/Projects/dotfiles/old/gitconfig
-[include]
-path = /home/tmerritt/Projects/dotfiles/old/gitconfig
-[include]
-path = /home/tmerritt/Projects/dotfiles/old/gitconfig
