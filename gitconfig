@@ -14,7 +14,7 @@
 [core]
   autocrlf = true
   whitepspace = trailing-space
-  pager = less -FRSXWQN -x2
+  pager = less -FRSXN
 [color]
   branch = auto
   diff = auto
