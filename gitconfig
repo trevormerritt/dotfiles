@@ -1,0 +1,45 @@
+[pretty]
+    pretty-history = format:%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
+[credential]
+  helper = store
+  username = tmerritt
+[alias]
+  st = status -sb
+  aa = add --all
+  undo = reset --soft --keep HEAD^
+  branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
+  churn = !git log --all -M -C --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort -n  | awk 'BEGIN {print "count,file"} {print $1 "," $2}'
+  history = !git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  tags = tag -l
+[core]
+  autocrlf = true
+  whitepspace = trailing-space
+  pager = less -FRSXWQN -x2
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  pager = true
+  status = auto
+  ui = true
+[color "status"]
+  added = green
+  changed = yellow
+  untracked = red
+[commit]
+  cleanup = strip
+[diff]
+  colorMoved = zebra
+  supressBlankEmpty = true
+  compactionHeuristic = true
+[interactive]
+  diffFilter = diff-hilight
+[merge]
+  defaultToUpstream = true
+[rebase]
+  autoSquash = true
+[user]
+  name = Trevor
+  email = trevor.merritt@gmail.com
+[fetch]
+  prune = true
